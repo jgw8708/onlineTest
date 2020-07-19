@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Score</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <style>
+         body{
+            width:800px; 
+            height: auto;
+            margin:0 auto;
+            background: rgb(31, 31, 31);
+        }
+
+        #page-wrapper{
+            background: white;
+            margin:40px 0;
+            padding: 10px 20px;
+            border-radius:5px;
+            box-shadow: 0 2px 6px rgba(100,100,100,0.3);
+            height: 900px;
+        }
+
+        .box{
+            width: 820px;
+            background-color: white;
+            display: block;
+            padding:5px;
+        }
+
+        .div {
+            display: table;
+            padding: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            
+            width: 600px;
+            height: 400px;
+
+        }
+        .score{
+            display:table;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 40px;
+           
+        }
+        .title{
+            text-align:center;
+            font-size:40px;
+            font-weight:bold;
+            font-style:italic;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            background-color: gold;
+            font-family:'Algerian';
+        }
+        .title2{
+            text-align:center;
+            font-size:20px;
+            font-weight:bold;
+            color: darkgreen;
+            font-family:'Jua', sans-serif;
+        }
+         .title3{
+            text-align:center;
+            font-size:24px;            
+            font-family:'Edwardian Script ITC';
+        }
+        .gradingscale{
+            display:table;
+            margin-left: auto;
+            margin-right: auto;
+            text-align:center;
+            font-family:'Jua', sans-serif;
+        }
+        
+
+        div { 
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+    <br><br><br>
+    <div id="page-wrapper">
+    <form method="get" action="csv_file_download_with_file">
+        <div class = 'div'>
+            <tr>
+                <td>
+                    <tr>
+                        <!--html문서가 이미지 찾을 때 기준이 된다.-->
+                        <div id="mainImage"><img src="https://image.flaticon.com/icons/svg/3135/3135722.svg" alt= "certification" width="200" height="200"></src></div>
+                         <p class='title'>CERTIFICATE of ACHIEVEMENT</p>
+                    </tr>
+                    <tr>
+                         <p class="title2">{{nameHtml}}님의 점수는 {{resultHtml}}({{dataHtml}}%)임으로 {{gradeHtml}}입니다.</p>
+                    </tr>
+                    <table class='gradingscale'>
+                        <tr>
+                            <th colspan="4">Grading Scale</th>
+                        </tr>
+                        <tr>
+                            <td>A</td><td>B</td><td>C</td><td>FAIL</td>
+                        </tr>
+                        <tr>                            
+                            <td>score > 90&nbsp</td><td>&nbspscore > 80&nbsp</td><td>&nbspscore > 70&nbsp</td><td>&nbspscore < 69&nbsp</td>                    
+                        </tr>
+                        
+
+                    </table>
+                    <p class="title3">The mission of MIT is to advance knowledge and educate students in science, technology, and other areas of scholarship that will best serve the nation and the world in the 21st century.
+                        The Institute is committed to generating, disseminating, and preserving knowledge, and to working with others to bring this knowledge to bear on the world’s great challenges. 
+                        MIT is dedicated to providing its students with an education that combines rigorous academic study and the excitement of discovery with the support and intellectual stimulation of a diverse campus community. 
+                        We seek to develop in each member of the MIT community the ability and passion to work wisely, creatively, and effectively for the betterment of humankind.</p>
+                </td>
+            </tr>
+            <br>
+
+            
+            <a href="../{{filenameHtml}}" download="{{filenameHtml}}">내 성적표 다운받기</a>
+            
+
+
+        </div>
+    </form>
+    </div>
+
+</body>
+</html>
